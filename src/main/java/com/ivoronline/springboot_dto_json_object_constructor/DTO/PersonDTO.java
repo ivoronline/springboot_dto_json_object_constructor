@@ -2,16 +2,12 @@ package com.ivoronline.springboot_dto_json_object_constructor.DTO;
 
 public class PersonDTO {
 
-  //PROPERTIES ARE NOT USED FOR DESERIALIZATION IF THERE IS CONSTRUCTOR
-  private String  name;
-  private Integer age;
+  //PROPERTIES
+  public String  name;
+  public Integer age;
 
-  //SETTERS
-  public String  getName() { return name; }
-  public Integer getAge () { return age;  }
-
-  //CONSTRUCTOR IS USED FOR DESERIALIZATION
-  PersonDTO(String  name, Integer age) {
+  //CONSTRUCTOR
+  private PersonDTO(String  name, Integer age) {
     this.name = name;
     this.age  = age;
   }
